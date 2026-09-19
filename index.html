@@ -102,6 +102,27 @@
 
     .hero-content { max-width: 860px; }
 
+    .hero-avatar-ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+      margin: 0 auto;
+      box-shadow: 0 0 30px rgba(108,99,255,0.45);
+      animation: spin 8s linear infinite;
+    }
+
+    .hero-avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border: 3px solid var(--bg);
+    }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -316,12 +337,16 @@
       position: absolute;
       inset: 6px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--bg-card2), var(--bg-card));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 6rem;
+      overflow: hidden;
       z-index: 1;
+    }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
     }
 
     .about-text p {
@@ -912,7 +937,12 @@
 
 <!-- ── Hero ── -->
 <section id="hero">
-  <div class="hero-content">
+    <div class="hero-content">
+    <div class="hero-avatar-wrap" style="animation: fadeDown 0.8s ease both; margin-bottom: 1.5rem;">
+      <div class="hero-avatar-ring">
+        <img src="rakesh.jpg" alt="Rakesh R J" class="hero-avatar-img" />
+      </div>
+    </div>
     <div class="hero-badge">
       <span class="dot"></span>
       Available &amp; Open to Opportunities
@@ -942,7 +972,9 @@
   <div class="about-grid reveal">
     <div class="about-avatar-wrap">
       <div class="avatar-ring">
-        <div class="avatar-inner">👨‍💻</div>
+        <div class="avatar-inner">
+          <img src="rakesh.jpg" alt="Rakesh R J" />
+        </div>
       </div>
     </div>
     <div class="about-text">
