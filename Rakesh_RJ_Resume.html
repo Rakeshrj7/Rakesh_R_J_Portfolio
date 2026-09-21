@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rakesh R J — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --section-gap: 18px;
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 10.5pt;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.5;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 36px 44px;
+    }
+
+    /* ── Header ── */
+    .header { text-align: center; margin-bottom: 18px; }
+
+    .header h1 {
+      font-size: 24pt;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .header .title-line {
+      font-size: 10.5pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 18px;
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
+
+    .contact-row a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .contact-row span { display: flex; align-items: center; gap: 4px; }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1.5px solid var(--border);
+      margin: 10px 0;
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: var(--section-gap); }
+
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 8px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid var(--accent);
+    }
+
+    /* ── Objective ── */
+    .objective p {
+      font-size: 10pt;
+      color: #374151;
+      line-height: 1.65;
+    }
+
+    /* ── Experience ── */
+    .exp-block { margin-bottom: 14px; }
+    .exp-block:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1px;
+    }
+
+    .exp-company {
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .exp-date {
+      font-size: 9pt;
+      color: var(--muted);
+      white-space: nowrap;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .exp-role {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .exp-project-label {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--text);
+      margin: 8px 0 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .exp-project-label::before {
+      content: '▸';
+      color: var(--accent);
+    }
+
+    .exp-project-sub {
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    ul.bullets {
+      padding-left: 14px;
+      list-style: none;
+      margin-bottom: 4px;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 10px;
+      font-size: 9.8pt;
+      color: #374151;
+      line-height: 1.55;
+      margin-bottom: 2px;
+    }
+
+    ul.bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 10pt;
+    }
+
+    .tech-line {
+      margin-top: 5px;
+      font-size: 8.8pt;
+      color: var(--muted);
+      font-family: 'Fira Code', monospace;
+    }
+
+    .tech-line strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ── Skills ── */
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table td {
+      padding: 3px 0;
+      vertical-align: top;
+      font-size: 9.8pt;
+      line-height: 1.55;
+    }
+    .skills-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      width: 160px;
+      white-space: nowrap;
+      padding-right: 10px;
+    }
+    .skills-table td:last-child { color: #374151; }
+
+    /* ── Projects ── */
+    .project-block { margin-bottom: 12px; }
+    .project-block:last-child { margin-bottom: 0; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .project-name {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .project-tech-inline {
+      font-size: 8.8pt;
+      color: var(--muted);
+      font-family: 'Fira Code', monospace;
+    }
+
+    .project-date {
+      font-size: 9pt;
+      color: var(--muted);
+      font-family: 'Fira Code', monospace;
+      white-space: nowrap;
+    }
+
+    /* ── Education ── */
+    .edu-block { margin-bottom: 8px; }
+    .edu-block:last-child { margin-bottom: 0; }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-institution { font-size: 10.5pt; font-weight: 700; }
+    .edu-date { font-size: 9pt; color: var(--muted); font-family: 'Fira Code', monospace; }
+    .edu-degree { font-size: 9.8pt; color: #374151; margin-top: 1px; }
+    .edu-score { font-size: 9.5pt; font-weight: 600; color: var(--accent); }
+
+    /* ── Papers ── */
+    .paper-block { margin-bottom: 8px; }
+    .paper-block:last-child { margin-bottom: 0; }
+    .paper-title { font-size: 10pt; font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
+
+    /* ── Print ── */
+    @media print {
+      body { font-size: 10pt; }
+      .page { padding: 22px 32px; max-width: 100%; }
+      a { color: inherit; }
+    }
+
+    @page { margin: 0; size: A4; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <h1>Rakesh R J</h1>
+    <div class="title-line">Associate Software Engineer · .NET Developer | Computer Vision Engineer</div>
+    <div class="contact-row">
+      <span>📧 <a href="mailto:rjr7828@gmail.com">rjr7828@gmail.com</a></span>
+      <span>📱 +91 7092008746</span>
+      <span>🔗 <a href="https://linkedin.com/in/rakesh-r-j-608a52211">linkedin.com/in/rakesh-r-j-608a52211</a></span>
+      <span>🐙 <a href="https://github.com/Rakeshrj7">github.com/Rakeshrj7</a></span>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- ── CAREER OBJECTIVE ── -->
+  <div class="section objective">
+    <div class="section-title">Career Objective</div>
+    <p>
+      Software engineer with ~2.7 years of total professional experience spanning .NET development, Azure cloud services, REST API integration, SQL data operations, and computer vision engineering. Seeking opportunities to leverage enterprise application development, cloud, and AI skills in a challenging and growth-oriented environment while delivering impactful solutions.
+    </p>
+  </div>
+
+  <!-- ── EXPERIENCE ── -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <!-- Accenture -->
+    <div class="exp-block">
+      <div class="exp-header">
+        <div class="exp-company">Accenture</div>
+        <div class="exp-date">Jan 2025 – Present &nbsp;|&nbsp; ~1.9 Years</div>
+      </div>
+      <div class="exp-role">Associate Software Engineer (ASE)</div>
+
+      <div class="exp-project-label">Project: Roche Diagnostics — Production Application &amp; Data Support</div>
+      <div class="exp-project-sub">Enterprise production support involving .NET, Azure, SQL, and REST API-based data workflows.</div>
+      <ul class="bullets">
+        <li>Handled and resolved production tickets related to application, data, and processing issues.</li>
+        <li>Analyzed tickets and investigated root causes to identify the required resolution.</li>
+        <li>Performed database changes and data updates using <strong>SQL</strong> based on business requirements.</li>
+        <li>Used <strong>REST APIs and Swagger/OpenAPI</strong> to trigger and process data in the production environment.</li>
+        <li>Uploaded and managed required data using <strong>Azure Storage Accounts</strong>.</li>
+        <li>Triggered downstream <strong>data processing workflows/pipelines</strong> through Azure.</li>
+        <li>Monitored and validated data processing results after API and Azure operations.</li>
+        <li>Troubleshot issues involving .NET applications, databases, APIs, and data-processing workflows.</li>
+        <li>Followed production <strong>change and incident-management processes</strong> while working with live enterprise systems.</li>
+        <li>Collaborated with the team to resolve production tickets and complete requested changes efficiently.</li>
+      </ul>
+      <div class="tech-line">
+        <strong>Technologies:</strong> .NET &nbsp;|&nbsp; C# &nbsp;|&nbsp; SQL &nbsp;|&nbsp; Azure &nbsp;|&nbsp; Azure Storage &nbsp;|&nbsp; REST API &nbsp;|&nbsp; Swagger/OpenAPI &nbsp;|&nbsp; Azure Data Pipelines &nbsp;|&nbsp; Production Support
+      </div>
+    </div>
+
+    <!-- MacV -->
+    <div class="exp-block">
+      <div class="exp-header">
+        <div class="exp-company">MacV</div>
+        <div class="exp-date">Apr 2024 – Nov 2024 &nbsp;|&nbsp; ~8 Months (Full-Time + Internship)</div>
+      </div>
+      <div class="exp-role">Computer Vision Engineer</div>
+
+      <!-- Project 1 -->
+      <div class="exp-project-label">Project 1: PPE &amp; Safety Alerting System</div>
+      <div class="exp-project-sub">AI-based safety monitoring system for PPE violations and forklift-related incidents.</div>
+      <ul class="bullets">
+        <li>Developed Python-based components for processing computer vision detection results.</li>
+        <li>Used <strong>gRPC</strong> for inter-service communication between microservices.</li>
+        <li>Built alert-processing workflows for PPE and forklift use cases.</li>
+        <li>Used <strong>MongoDB</strong> to manage alert configurations, jobs, channels, and related data.</li>
+        <li>Integrated <strong>AWS SQS</strong> for asynchronous alert processing and <strong>AWS Lambda</strong>-based notification workflows.</li>
+        <li>Integrated notification services including <strong>AWS SES/SNS</strong> for real-time alerting.</li>
+      </ul>
+      <div class="tech-line">
+        <strong>Technologies:</strong> Python &nbsp;|&nbsp; gRPC &nbsp;|&nbsp; MongoDB &nbsp;|&nbsp; AWS SQS &nbsp;|&nbsp; AWS Lambda &nbsp;|&nbsp; AWS SES &nbsp;|&nbsp; AWS SNS
+      </div>
+
+      <!-- Project 2 -->
+      <div class="exp-project-label">Project 2: Gemini AI Video Analysis &amp; Alerting</div>
+      <div class="exp-project-sub">AI-powered video analysis using Gemini for safety event detection (helmet violations, falls, harness).</div>
+      <ul class="bullets">
+        <li>Developed and modified <strong>FastAPI</strong> backend services for video ingestion and processing.</li>
+        <li>Integrated <strong>Gemini AI</strong> for video analysis and generated structured detection results.</li>
+        <li>Created and maintained <strong>prompts</strong> for various detection scenarios (helmet violations, falls, safety harness).</li>
+        <li>Processed videos stored in <strong>Amazon S3</strong> and optimized frame sampling rates for performance.</li>
+        <li>Integrated detection results with an alerting pipeline via <strong>AWS SQS</strong> and stored alert data in <strong>MongoDB</strong>.</li>
+      </ul>
+      <div class="tech-line">
+        <strong>Technologies:</strong> Python &nbsp;|&nbsp; FastAPI &nbsp;|&nbsp; Gemini AI &nbsp;|&nbsp; Prompt Engineering &nbsp;|&nbsp; AWS S3 &nbsp;|&nbsp; AWS SQS &nbsp;|&nbsp; MongoDB &nbsp;|&nbsp; REST API
+      </div>
+
+      <!-- Project 3 -->
+      <div class="exp-project-label">Project 3: Vehicle Detection &amp; Number Plate Recognition</div>
+      <div class="exp-project-sub">Computer vision system for vehicle detection, tracking, classification, and ANPR.</div>
+      <ul class="bullets">
+        <li>Implemented vehicle detection using <strong>YOLOv8</strong> with object tracking across video frames.</li>
+        <li>Performed number plate detection and text extraction using <strong>EasyOCR</strong>.</li>
+        <li>Classified vehicles into categories: cars, buses, trucks, bikes, ambulances, and auto-rickshaws.</li>
+        <li>Implemented vehicle color classification and generated structured output (Track ID, type, plate, confidence, color).</li>
+        <li>Optimized video processing using <strong>frame skipping and frame-similarity</strong> techniques.</li>
+      </ul>
+      <div class="tech-line">
+        <strong>Technologies:</strong> Python &nbsp;|&nbsp; YOLOv8 &nbsp;|&nbsp; OpenCV &nbsp;|&nbsp; EasyOCR &nbsp;|&nbsp; TensorFlow/Keras &nbsp;|&nbsp; Object Tracking &nbsp;|&nbsp; Computer Vision
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SKILLS ── -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <table class="skills-table">
+      <tr>
+        <td>Programming &amp; Data</td>
+        <td>Python, SQL, C# / .NET, Java, C</td>
+      </tr>
+      <tr>
+        <td>.NET Development</td>
+        <td>.NET, C#, ASP.NET, Production Support, Troubleshooting, Debugging</td>
+      </tr>
+      <tr>
+        <td>Cloud &amp; DevOps</td>
+        <td>Microsoft Azure, Azure Storage Accounts, Azure Data Pipelines, Git / GitHub, CI/CD fundamentals</td>
+      </tr>
+      <tr>
+        <td>APIs &amp; Integration</td>
+        <td>REST APIs, Swagger / OpenAPI, API Testing, Data Integration</td>
+      </tr>
+      <tr>
+        <td>AI &amp; Computer Vision</td>
+        <td>Python, OpenCV, YOLOv8, EasyOCR, FastAPI, Gemini AI, TensorFlow, Keras, CNN, Object Tracking, Prompt Engineering</td>
+      </tr>
+      <tr>
+        <td>Cloud (AWS)</td>
+        <td>AWS SQS, AWS Lambda, AWS SES, AWS SNS, Amazon S3</td>
+      </tr>
+      <tr>
+        <td>Databases &amp; Tools</td>
+        <td>SQL, MongoDB, gRPC, VS Code, IntelliJ, Jupyter Notebook, Power BI, Git</td>
+      </tr>
+      <tr>
+        <td>Web</td>
+        <td>HTML/CSS, JavaScript, React.js, PHP</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ── EDUCATION ── -->
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="edu-block">
+      <div class="edu-header">
+        <div class="edu-institution">Kongu Engineering College</div>
+        <div class="edu-date">Apr 2024</div>
+      </div>
+      <div class="edu-degree">B.E. Computer Science Engineering &nbsp;—&nbsp; <span class="edu-score">CGPA: 8.45 / 10.0</span></div>
+    </div>
+
+    <div class="edu-block">
+      <div class="edu-header">
+        <div class="edu-institution">Veveaham Hr. Sec. School</div>
+        <div class="edu-date">Mar 2020</div>
+      </div>
+      <div class="edu-degree">HSC (Class XII) &nbsp;—&nbsp; <span class="edu-score">70%</span> &nbsp;&nbsp;|&nbsp;&nbsp; SSLC (Class X) &nbsp;—&nbsp; <span class="edu-score">84.8%</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
