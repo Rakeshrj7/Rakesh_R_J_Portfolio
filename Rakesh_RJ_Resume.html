@@ -13,63 +13,55 @@
     /* ── Page margins handled at @page level ── */
     @page {
       size: A4;
-      margin: 13mm 15mm 13mm 15mm;
+      margin: 10mm 14mm 10mm 14mm;
     }
 
     /* ── Base ── */
     body {
       font-family: 'Inter', Arial, Helvetica, sans-serif;
-      font-size: 9.8pt;
+      font-size: 9.4pt;
       color: #111827;
       background: #fff;
-      line-height: 1.44;
+      line-height: 1.38;
       margin: 0;
       padding: 0;
     }
 
-    /* ── Page wrapper — screen preview only, no fixed height ── */
+    /* ── Page wrapper — screen preview only ── */
     .page {
-      width: 180mm;   /* 210mm - 2×15mm margins */
+      width: 182mm;
       margin: 0 auto;
-      padding: 13mm 0;  /* screen-only top/bottom spacing */
+      padding: 10mm 0;
     }
-
-    /* ─────────────────────────────
-       VARIABLES
-    ───────────────────────────── */
-    .accent   { color: #1d4ed8; }
-    .muted    { color: #4b5563; }
-    .light    { color: #6b7280; }
 
     /* ─────────────────────────────
        HEADER
     ───────────────────────────── */
     .hdr-name {
-      font-size: 21pt;
+      font-size: 20pt;
       font-weight: 700;
       letter-spacing: -0.3px;
       text-align: center;
       color: #111827;
-      margin-bottom: 2.5pt;
+      margin-bottom: 2pt;
     }
 
     .hdr-title {
-      font-size: 9.8pt;
+      font-size: 9.2pt;
       font-weight: 500;
       color: #1d4ed8;
       text-align: center;
-      margin-bottom: 6pt;
+      margin-bottom: 5pt;
     }
 
-    /* Contact — table for reliable centering */
     .ct {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 7pt;
+      margin-bottom: 5pt;
     }
     .ct td {
       text-align: center;
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       color: #4b5563;
       padding: 0 3pt;
       white-space: nowrap;
@@ -80,97 +72,96 @@
     .div-line {
       border: none;
       border-top: 1.2pt solid #d1d5db;
-      margin: 5pt 0 8pt;
+      margin: 4pt 0 6pt;
     }
 
     /* ─────────────────────────────
        SECTION
     ───────────────────────────── */
     .section {
-      margin-bottom: 9pt;
+      margin-bottom: 7pt;
     }
 
     .sec-title {
-      font-size: 8.5pt;
+      font-size: 8pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.13em;
       color: #1d4ed8;
       border-bottom: 1pt solid #1d4ed8;
-      padding-bottom: 2pt;
-      margin-bottom: 6pt;
+      padding-bottom: 1.5pt;
+      margin-bottom: 5pt;
     }
 
     /* ─────────────────────────────
-       CAREER OBJECTIVE
+       PROFESSIONAL SUMMARY
     ───────────────────────────── */
     .obj-text {
-      font-size: 9.3pt;
+      font-size: 9pt;
       color: #374151;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     /* ─────────────────────────────
        EXPERIENCE
     ───────────────────────────── */
     .exp-block {
-      margin-bottom: 9pt;
+      margin-bottom: 7pt;
     }
     .exp-block:last-child { margin-bottom: 0; }
 
-    /* Company / date row */
     .exp-top {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 1pt;
+      margin-bottom: 0.5pt;
     }
     .exp-top td { padding: 0; vertical-align: baseline; }
     .exp-top .co {
-      font-size: 10.5pt;
+      font-size: 10pt;
       font-weight: 700;
       color: #111827;
     }
     .exp-top .dt {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       color: #6b7280;
       text-align: right;
       white-space: nowrap;
     }
 
     .exp-role {
-      font-size: 9.3pt;
+      font-size: 9pt;
       font-weight: 600;
       color: #1d4ed8;
-      margin-bottom: 4pt;
+      margin-bottom: 3pt;
     }
 
     /* Sub-project */
     .pj-label {
-      font-size: 9pt;
+      font-size: 8.8pt;
       font-weight: 700;
       color: #111827;
-      margin: 5pt 0 1.5pt;
+      margin: 4pt 0 1pt;
     }
     .pj-label::before { content: '▸ '; color: #1d4ed8; }
 
     .pj-sub {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       color: #6b7280;
       font-style: italic;
-      margin-bottom: 2.5pt;
+      margin-bottom: 2pt;
     }
 
     /* Bullets */
     ul.bl {
-      margin: 0 0 2.5pt 0;
+      margin: 0 0 2pt 0;
       padding: 0;
       list-style: none;
     }
     ul.bl li {
-      font-size: 9pt;
+      font-size: 8.8pt;
       color: #374151;
-      line-height: 1.48;
-      margin-bottom: 1.5pt;
+      line-height: 1.42;
+      margin-bottom: 1pt;
       padding-left: 10pt;
       position: relative;
     }
@@ -179,14 +170,14 @@
       position: absolute;
       left: 1.5pt;
       color: #1d4ed8;
-      font-size: 9pt;
+      font-size: 8.8pt;
     }
     ul.bl b { color: #111827; font-weight: 600; }
 
     .tech {
-      font-size: 7.8pt;
+      font-size: 7.5pt;
       color: #6b7280;
-      margin-top: 2.5pt;
+      margin-top: 2pt;
     }
     .tech b { color: #374151; font-weight: 600; }
 
@@ -199,14 +190,14 @@
     }
     .sk-tbl tr { vertical-align: top; }
     .sk-tbl td {
-      padding: 1.8pt 0;
-      font-size: 9pt;
-      line-height: 1.48;
+      padding: 1.5pt 0;
+      font-size: 8.8pt;
+      line-height: 1.42;
     }
     .sk-tbl .sk-l {
       font-weight: 600;
       color: #111827;
-      width: 38mm;
+      width: 36mm;
       padding-right: 6pt;
       white-space: nowrap;
     }
@@ -215,7 +206,7 @@
     /* ─────────────────────────────
        EDUCATION
     ───────────────────────────── */
-    .edu-wrap { margin-bottom: 5pt; }
+    .edu-wrap { margin-bottom: 4pt; }
     .edu-wrap:last-child { margin-bottom: 0; }
 
     .edu-tbl {
@@ -224,20 +215,20 @@
     }
     .edu-tbl td { padding: 0; vertical-align: baseline; }
     .edu-tbl .inst {
-      font-size: 10pt;
+      font-size: 9.8pt;
       font-weight: 700;
       color: #111827;
     }
     .edu-tbl .edu-dt {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       color: #6b7280;
       text-align: right;
       white-space: nowrap;
     }
     .edu-deg {
-      font-size: 9pt;
+      font-size: 8.8pt;
       color: #4b5563;
-      margin-top: 1pt;
+      margin-top: 0.5pt;
     }
     .edu-sc {
       font-weight: 600;
@@ -245,21 +236,14 @@
     }
 
     /* ─────────────────────────────
-       PRINT — critical overrides
+       PRINT
     ───────────────────────────── */
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-
-      /* Reset screen wrapper — @page handles margins */
       .page { width: 100%; margin: 0; padding: 0; }
-
-      /* Allow sections to break naturally across pages */
       .section { page-break-inside: auto; }
-
-      /* Keep individual project blocks together if possible */
       .exp-block { page-break-inside: avoid; }
       .edu-wrap  { page-break-inside: avoid; }
-
       a { color: inherit !important; text-decoration: none !important; }
     }
   </style>
